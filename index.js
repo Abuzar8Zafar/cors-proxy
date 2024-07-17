@@ -25,3 +25,5 @@ app.get("/api/proxy", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`CORS Proxy running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
