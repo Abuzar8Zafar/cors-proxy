@@ -3,7 +3,7 @@ const cors = require("cors");
 const axios = require("axios");
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 
@@ -25,5 +25,3 @@ app.get("/api/proxy", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`CORS Proxy running on http://localhost:${PORT}`);
 });
-
-module.exports = app;
